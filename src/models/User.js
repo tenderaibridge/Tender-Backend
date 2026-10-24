@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, trim: true },
+
     email: {
       type: String,
       required: true,
@@ -11,7 +12,12 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
     },
-    passwordHash: { type: String, required: true, select: false },
+
+    passwordHash: {
+      type: String,
+      required: true,
+      select: false,
+    },
 
     business: {
       companyName: { type: String, trim: true, default: "" },
@@ -21,8 +27,18 @@ const userSchema = new mongoose.Schema(
       categories: { type: [String], default: [] },
       state: { type: String, trim: true, default: "" },
       annualTurnover: { type: Number, default: null },
-      yearsOfExperience: { type: Number, default: null },
+      yearsOfExperience: { type: Number, default: null },    
+      documents: { type: String, default: "" },
+
     },
+
+    // Tenders saved by this particular user
+    savedTenderIds: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Tender",
+      },
+    ],
   },
   { timestamps: true }
 );

@@ -1,2 +1,93 @@
-node_modules/
+# ==========================================
+# 1. Environment Secrets & Credentials (CRITICAL)
+# ==========================================
 .env
+.env.local
+.env.*.local
+*.env
+*.pem
+*.key
+*.cert
+*.pfx
+credentials.json
+client_secret.json
+
+# ==========================================
+# 2. Node.js / TypeScript (Express, NestJS, etc.)
+# ==========================================
+node_modules/
+/dist
+/build
+/out
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+.tsbuildinfo
+
+# ==========================================
+# 3. Python (Django, FastAPI, Flask)
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# 4. Go
+# ==========================================
+/bin/
+/out/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.prof
+
+# ==========================================
+# 5. Java / Spring Boot
+# ==========================================
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+/target/
+.gradle/
+/build/
+
+# ==========================================
+# 6. Databases & Local Containers
+# ==========================================
+.data/
+postgres-data/
+mongo-data/
+*.db
+*.sqlite
+*.sqlite3
+.docker/
+
+# ==========================================
+# 7. OS & IDE Specific (Mac, Windows, VS Code)
+# ==========================================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
